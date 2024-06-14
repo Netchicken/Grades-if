@@ -34,6 +34,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lbxGrade = new System.Windows.Forms.ListBox();
             this.btnCalculate = new System.Windows.Forms.Button();
+            this.lblDataError = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtGrade
@@ -89,11 +90,24 @@
             this.btnCalculate.UseVisualStyleBackColor = true;
             this.btnCalculate.Click += new System.EventHandler(this.btnCalculate_Click);
             // 
+            // lblDataError
+            // 
+            this.lblDataError.BackColor = System.Drawing.Color.Yellow;
+            this.lblDataError.Font = new System.Drawing.Font("Cooper Black", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDataError.ForeColor = System.Drawing.Color.Red;
+            this.lblDataError.Location = new System.Drawing.Point(288, 154);
+            this.lblDataError.Name = "lblDataError";
+            this.lblDataError.Size = new System.Drawing.Size(116, 162);
+            this.lblDataError.TabIndex = 7;
+            this.lblDataError.Text = "label2";
+            this.lblDataError.Visible = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(426, 341);
+            this.Controls.Add(this.lblDataError);
             this.Controls.Add(this.btnCalculate);
             this.Controls.Add(this.lbxGrade);
             this.Controls.Add(this.label1);
@@ -114,6 +128,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox lbxGrade;
         private System.Windows.Forms.Button btnCalculate;
+        private System.Windows.Forms.Label lblDataError;
     }
 }
 

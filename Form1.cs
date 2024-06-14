@@ -22,18 +22,28 @@ namespace Grafes_if
             //converts the grade which is a text to a number.
             Single grade = Convert.ToSingle(txtGrade.Text); //make a variable to hold the grade
             String name = txtName.Text; //make a variable to hoild the name
+            lblDataError.Visible = false; //make sure the label is hidden
 
+            //if the grade is less than 0 or greater than 100
+            if ((grade <= 0) || (grade > 100))
+            { //if they get less than 0
+                lbxGrade.Items.Add(name + " scored " + grade + " = Data Error");
+                lblDataError.Text = "Bad data for " + name;
+                lblDataError.Visible = true; //show the label
+            }
 
-            if (grade < 50) //if the grade is less than 50
+            else if (grade < 50) //if the grade is less than 50
             {
                 //this adds a new item to the listbox if it is less than 50
                 lbxGrade.Items.Add(name + " scored " + grade + " = Fail");
             }
-            else //if its not less than 50
+            else if (grade < 100)//if its not less than 50
             {
                 //this adds a new item to the listbox if it is greater than 50
                 lbxGrade.Items.Add(name + " scored " + grade + " = Pass");
             }
+
         }
+
     }
 }
