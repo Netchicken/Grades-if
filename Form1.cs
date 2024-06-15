@@ -30,6 +30,7 @@ namespace Grafes_if
                 lbxGrade.Items.Add(name + " scored " + grade + " = Data Error");
                 lblDataError.Text = "Bad data for " + name;
                 lblDataError.Visible = true; //show the label
+                DataErrorProvider.SetError(this.lblDataError, "Grade is invalid.");
             }
 
             else if (grade < 50) //if the grade is less than 50

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtGrade = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblGrade = new System.Windows.Forms.Label();
@@ -35,6 +36,8 @@
             this.lbxGrade = new System.Windows.Forms.ListBox();
             this.btnCalculate = new System.Windows.Forms.Button();
             this.lblDataError = new System.Windows.Forms.Label();
+            this.DataErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.DataErrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // txtGrade
@@ -102,11 +105,15 @@
             this.lblDataError.Text = "label2";
             this.lblDataError.Visible = false;
             // 
+            // DataErrorProvider
+            // 
+            this.DataErrorProvider.ContainerControl = this;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(426, 341);
+            this.ClientSize = new System.Drawing.Size(573, 341);
             this.Controls.Add(this.lblDataError);
             this.Controls.Add(this.btnCalculate);
             this.Controls.Add(this.lbxGrade);
@@ -116,6 +123,7 @@
             this.Controls.Add(this.txtGrade);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.DataErrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,6 +137,7 @@
         private System.Windows.Forms.ListBox lbxGrade;
         private System.Windows.Forms.Button btnCalculate;
         private System.Windows.Forms.Label lblDataError;
+        private System.Windows.Forms.ErrorProvider DataErrorProvider;
     }
 }
 
